@@ -1,4 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@900&display=swap')
+$Roboto: 'Roboto', sans-serif
+$Open-sans: 'Open Sans', sans-serif
 
 @function multiple-box-shadow ($n)
   $value: '#{random(2000)}px #{random(20000)}px #FFF'
@@ -16,8 +18,23 @@ html
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
   // overflow: hidden
 
-h1
-  color: #fff
+.hello
+  font-family: $Roboto
+  color: #ffffff
+  text-align: center
+  font-size: 2.1875em
+  // font-weight: bold
+
+.my-project
+  color: #00ffff
+
+#job-title
+  // border: 0.0625em solid #999999
+  color: #999999
+  font-family: $Open-sans
+  font-size: 0.625em
+  margin: 0 auto
+  width: 12.5em
 
 #stars
   width: 1px
