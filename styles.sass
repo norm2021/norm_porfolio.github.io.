@@ -24,13 +24,12 @@ html
   font-size: 3.1875em
   margin-bottom: 10px
   text-align: center
+  // $shadow-colors: (#)
   $shadow-property-values: ()
 
-  @for $i from 1 through 10
-    $shadow-property-values: append($shadow-property-values, -$i*1px $i*1px #00ffff, comma)
+  @for $i from 1 through 7
+    $shadow-property-values: append($shadow-property-values, -$i*1px $i*1px #00FF00, comma)
   text-shadow: $shadow-property-values
-  
-
 
 .my-project
   color: #00ffff
@@ -48,6 +47,7 @@ html
   width: 1px
   height: 1px
   background: transparent
+  border-radius: 50%
   box-shadow: $shadows-small
   animation			: animStar 50s linear infinite
     
@@ -58,13 +58,14 @@ html
     width: 1px
     height: 1px
     background: transparent
-    border-radius: 
+    border-radius: 50%
     box-shadow: $shadows-small
     
 #stars2
   width: 2px
   height: 2px
   background: transparent
+  border-radius: 50%
   box-shadow: $shadows-medium
   animation			: animStar 100s linear infinite
     
@@ -75,12 +76,14 @@ html
     width: 2px
     height: 2px
     background: transparent
+    border-radius: 50%
     box-shadow: $shadows-medium
     
 #stars3
   width: 3px
   height: 3px
   background: transparent
+  border-radius: 50%
   box-shadow: $shadows-big
   animation			: animStar 150s linear infinite
     
@@ -91,6 +94,7 @@ html
     width: 3px
     height: 3px
     background: transparent
+    border-radius: 50%
     box-shadow: $shadows-big
     
 @keyframes animStar
