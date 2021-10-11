@@ -39,7 +39,7 @@ body
   display: flex
   justify-content: center
   height: 100vh
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 500%)
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -48,14 +48,20 @@ body
 .card
   align-self: center
   flex-direction: column
-  
 
 .my-name
   animation: glow 3s infinite alternate
   font-family: $Roboto
   color: #ffffff
-  font-size: 6vw
   text-align: center
+  font-size: toRem(40)
+
+  @media (min-width: 600px) 
+    font-size: toRem(60)
+  
+  @media (min-width: 1200px) 
+    font-size: toRem(80)
+
   $shadow-property-values: ()
 
   @for $i from 1 through 3
@@ -64,8 +70,7 @@ body
   @keyframes glow
     to
       text-shadow: $shadow-property-values
-      
-
+    
 .my-project
   color: #00ffff
 
@@ -73,10 +78,18 @@ body
   // border: 0.0625em solid #999999
   color: #999999
   font-family: $Open-sans
-  font-size: 0.9375rem
+  // font-size: 0.9375rem
   margin: 0 auto
   text-align: center
   width: 12.5rem
+
+  font-size: toRem(10)
+
+  @media (min-width: 600px)
+    font-size: toRem(15)
+
+  @media (min-width: 1200px)
+    font-size: toRem(30)
 
 .stars
   width: toRem(1)
