@@ -17,6 +17,7 @@ $shadows-small:  multiple-box-shadow(700)
 $shadows-medium: multiple-box-shadow(200)
 $shadows-big:    multiple-box-shadow(100)
 
+
 html
   box-sizing: border-box
 
@@ -49,6 +50,7 @@ body
   align-self: center
   flex-direction: column
 
+
 .my-name
   animation: glow 3s infinite alternate
   font-family: $Roboto
@@ -74,15 +76,12 @@ body
 
 @keyframes float 
   0% 
-    //box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6)
     transform: translatey(50px)
   
   50% 
-    //box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2)
     transform: translatey(130px)
   
-  100% 
-    //box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6)
+  100%
     transform: translatey(50px)
   
 
@@ -140,7 +139,7 @@ body
   &:after
     content: " "
     position: absolute
-    top: 2000px
+    top: 0px
     width: toRem(1)
     height: toRem(1)
     background: transparent
@@ -159,7 +158,7 @@ body
   &:after
     content: " "
     position: absolute
-    top: 2000px
+    top: 0px
     width: toRem(2)
     height: toRem(2)
     background: transparent
@@ -179,7 +178,7 @@ body
   &:after
     content: " "
     position: absolute
-    top: 2000px
+    top: 0px
     width: toRem(3)
     height: toRem(3)
     background: transparent
@@ -187,8 +186,10 @@ body
     box-shadow: $shadows-big
     
 @keyframes animStar
-  from	
+  0%	
     transform: translateY(0px)
-  to		
+  50%		
     transform: translateY(-2000px)
+  100%
+    transform: translateY(0px)
     
