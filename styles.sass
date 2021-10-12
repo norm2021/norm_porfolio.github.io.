@@ -109,11 +109,8 @@ ul
 li
   list-style-type: none
 
-.show-more
-  visibility: hidden
-
-.img-1
-  background: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
+.img-container
+  // background: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
   position: relative
   display: flex
   justify-content: center
@@ -121,8 +118,9 @@ li
   width: toRem(200)
   height: toRem(200)
   background-size: cover
-  opacity: 0.5
-   
+  position: relative
+  width: 50%
+  
   @media screen and (min-width: 600px) 
     width: toRem(300)
     height: toRem(300)
@@ -130,10 +128,42 @@ li
   @media screen and (min-width: 1200px) 
     width: toRem(400)
     height: toRem(400)
-   
-  &:hover
+
+  & :hover, .img-1
+    opacity: 0.3
+  
+  & :hover, .middle
     opacity: 1
 
+.img-1
+  opacity: 1
+  display: block
+  width: 100%
+  height: auto
+  transition: .5s ease
+  backface-visibility: hidden
+
+.middle 
+  transition: .5s ease
+  opacity: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  text-align: center
+
+.show-more
+  border: none
+  color: white
+  padding: 15px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 16px
+  margin: 4px 2px
+  cursor: pointer
+  background-color: #4CAF50
 
 .arrow-container
   width: 100%
@@ -173,8 +203,6 @@ li
   @media (min-width: 1200px)
     font-size: toRem(20)
 
-
-
 .stars
   width: toRem(1)
   height: toRem(1)
@@ -184,7 +212,7 @@ li
   box-shadow: $shadows-small
   animation			: animStar 150s linear infinite
 
-  &:after
+  &::after
     content: " "
     position: absolute
     top: 0px
@@ -203,7 +231,7 @@ li
   box-shadow: $shadows-medium
   animation			: animStar 200s linear infinite
     
-  &:after
+  &::after
     content: " "
     position: absolute
     top: 0px
@@ -223,7 +251,7 @@ li
   animation			: animStar 250s linear infinite
   
 
-  &:after
+  &::after
     content: " "
     position: absolute
     top: 0px
