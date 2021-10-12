@@ -96,51 +96,51 @@ body
 .row
   flex-direction: row
 
+#portfolio
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  position: relative
+
 ul
   list-style-type: none
-  display: table
 
-  > li
-    display: table-cell
+li
+  list-style-type: none
 
-img
-  max-width: 100%
-  max-height: 100%
+.show-more
+  visibility: hidden
 
 .img-1
-  // background-image: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
-  // background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Elongated_circle_1.svg')
-  // content: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
-  background-repeat: no-repeat
-  width: toRem(100)
-  height: toRem(100)
+  background: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: toRem(200)
+  height: toRem(200)
+  background-size: cover
+  opacity: 0.5
    
   @media screen and (min-width: 600px) 
-    width: toRem(200)
-    height: toRem(200)
+    width: toRem(300)
+    height: toRem(300)
   
   @media screen and (min-width: 1200px) 
-    width: toRem(250)
-    height: toRem(250)
-//   -webkit-filter: brightness(70%)
-// 	-moz-filter: brightness(70%)
-// 	-o-filter: brightness(70%)
-// 	-ms-filter: brightness(70%)
-//   filter: brightness(70%)
+    width: toRem(400)
+    height: toRem(400)
+   
+  &:hover
+    opacity: 1
 
-// .img-1:hover
-//   -webkit-filter: brightness(100%)
-// 	-moz-filter: brightness(100%)
-// 	-o-filter: brightness(100%)
-// 	-ms-filter: brightness(100%)
-// 	filter: brightness(100%)
 
-.scroll-down-container
+.arrow-container
   width: 100%
   height: 100%
   bottom: 0px
 
-.scroll-down
+.arrow
   width: 0
   height: 0
   border:
