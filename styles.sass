@@ -105,9 +105,12 @@ body
 
 ul
   list-style-type: none
+  columns: 2
 
 li
   list-style-type: none
+  display: flex
+  justify-content: center
 
 .img-container
   // background: url('https://baxcompany.com/wp-content/uploads/2019/07/1-number-one-in-circle-png-15.png')
@@ -130,7 +133,7 @@ li
     height: toRem(400)
 
   &:hover .img-1
-    opacity: 0.3
+    opacity: 1
   
   &:hover .un-shade
     opacity: 1
@@ -144,7 +147,7 @@ li
 // }
 
 .img-1
-  opacity: 1
+  opacity: 0.3
   display: block
   width: 100%
   height: auto
