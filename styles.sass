@@ -129,11 +129,19 @@ li
     width: toRem(400)
     height: toRem(400)
 
-  & :hover, .img-1
+  &:hover .img-1
     opacity: 0.3
   
-  & :hover, .middle
+  &:hover .un-shade
     opacity: 1
+
+// .img-container:hover .img-1 {
+//   opacity: 0.3;
+// }
+
+// .img-container:hover .un-shade {
+//   opacity: 1;
+// }
 
 .img-1
   opacity: 1
@@ -143,9 +151,9 @@ li
   transition: .5s ease
   backface-visibility: hidden
 
-.middle 
-  transition: .5s ease
+.un-shade
   opacity: 0
+  transition: .5s ease
   position: absolute
   top: 50%
   left: 50%
