@@ -36,6 +36,14 @@ html
 body
   line-height: 1.3
 
+.top-bottom-margin
+  margin-top: 50px
+  margin-bottom: 50px
+
+.sides-margin
+  margin-left: 50px
+  margin-right: 50px
+
 #home
   display: flex
   justify-content: center
@@ -97,7 +105,7 @@ body
 .row
   flex-direction: row
 
-#portfolio
+#Projects
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -121,7 +129,7 @@ body
   //   width: toRem(400)
   //   height: toRem(400)
 
-  &:hover .img-1
+  &:hover .img-shade
     opacity: 1
   
   &:hover .un-shade
@@ -134,15 +142,119 @@ body
 // .img-container:hover .un-shade {
 //   opacity: 1;
 // }
+ 
+.nav-line
+  border-bottom: 5px solid #00ffff
+  position: relative
 
-ul
+#Navigation
+  overflow: hidden
+  z-index: 1
+  // overflow: auto
+  background-color: #ff00ff
+  // display: flex
+  // justify-content: flex-end
+  // margin-right: auto
+  width: 100%
+  // align-items: center
+  padding: 20px 20px 20px 20px
+  position: relative
+  
+.nav-list
+  // top: 0px
+  display: flex
+  justify-content: space-around
+  float: right
+  width: 50%
+  align-items: center
+    
+  // width: 100% (mobile)
+
+.nav-list li
+  list-style: none
+
+.nav-list a
+  letter-spacing: 1px
+  text-transform: uppercase
+  text-decoration: none
+  font-family: $Roboto
+  text-align: center
+  padding: 3px
+  
+
+  &:hover
+    transition: .5 ease
+    background-color: #00ff00
+
+.burger
+  display: none
+  float: right
+
+.burger div
+  width: 30px
+  height: 4px
+  margin: 4px
+  background-color: rgb(226, 226, 226)
+
+@media screen and (max-width:768px)
+  
+  .nav-list
+    position: absolute
+    width: 100%
+    display: flex
+    flex-direction: column
+    // align-items: center
+    transform: translateY(-200%)
+    // transition: transform 0.5s ease-in
+    height: 100px
+    // padding: 10px
+
+  .nav-list li
+    opacity: 0
+  
+  .burger
+    display: block
+    background-color: #ff00ff
+
+  .nav-active
+    transform: translateY(20%)
+    position: relative
+  
+  .nav-height
+    position: fixed
+    z-index: 1
+
+  @keyframes nav-list-fade
+    from
+      opacity: 0
+      transform: translateY(-200%)
+    to
+      opacity: 1
+      transform: translateY(20%)
+      
+    // z-index: 1
+
+// .not-fixed
+//   position: absolute
+//   bottom: 0
+
+// .sticky
+//   position: fixed 
+//   width: 100% 
+//   top:0
+//   z-index:1
+
+// #About-me
+//   position: relative
+
+.project-list
   list-style-type: none
   margin: 0
   padding: 0
   column-count: 2
   column-gap: 0
 
-.img-1
+.img-shade
   opacity: 0.5
   display: block
   width: 100%
@@ -191,10 +303,7 @@ ul
   transform: translatey(30px)
   animation: float 6s ease-in-out infinite
   text-align: center
-  
-.nav-line
-  border-bottom: 5px solid #00ffff
-
+ 
 .job-title
   // border: 0.0625em solid #999999
   color: #999999
