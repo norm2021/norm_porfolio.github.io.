@@ -21,26 +21,31 @@ const navSlide = () =>{
 $(document).ready(function() {
   
     $(window).scroll(function () {
-        //if you hard code, then use console
-        //.log to determine when you want the 
-        //nav bar to stick.  
-        console.log($(window).scrollTop())
+        //console.log($(window).scrollTop())
+        var window_top = $(window).scrollTop();
+        var div_top = $('.nav-line').offset().top;
 
-        if($(window).width() < 768){
-            if ($(window).scrollTop() > 624) {
-                $('#Navigation').addClass('nav-fixed');
-            }
-            if ($(window).scrollTop() < 624) {
-                $('#Navigation').removeClass('nav-fixed');
-            }
+        if(window_top > div_top){
+            $('#Navigation').addClass('nav-fixed');
         }else{
-            if ($(window).scrollTop() > 752) {
-                $('#Navigation').addClass('nav-fixed');
-            }
-            if ($(window).scrollTop() < 752) {
-                $('#Navigation').removeClass('nav-fixed');
-            }
+            $('#Navigation').removeClass('nav-fixed');
         }
+
+        // if($(window).width() < 768){
+        //     if ($(window).scrollTop() > 750) {
+        //         $('#Navigation').addClass('nav-fixed');
+        //     }
+        //     if ($(window).scrollTop() < 624) {
+        //         $('#Navigation').removeClass('nav-fixed');
+        //     }
+        // }else{
+        //     if ($(window).scrollTop() > 752) {
+        //         $('#Navigation').addClass('nav-fixed');
+        //     }
+        //     if ($(window).scrollTop() < 752) {
+        //         $('#Navigation').removeClass('nav-fixed');
+        //     }
+        // }
       
     });
   });
