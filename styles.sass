@@ -121,6 +121,51 @@ body
   -o-background-size: cover
   background-size: cover
   position: relative
+  display: flex
+  justify-content: center
+
+.wordpress-site
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  background-size: cover
+  height: 400px
+  width: 500px
+  float: right
+
+  &:hover .img-shade
+    opacity: 0.2
+  
+  &:hover .un-shade
+    opacity: 1
+
+  @media screen and (max-width:768px)
+    height: 250px
+    width: 300px
+
+.wifi-tool
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  background-size: cover
+  float: left
+
+
+  height: 400px
+  width: 500px
+
+  &:hover .img-shade
+    opacity: 0.2
+  
+  &:hover .un-shade
+    opacity: 1
+
+  @media screen and (max-width:768px)
+    height: 250px
+    width: 300px
+// wifi-img
 
 .img-container
   position: relative
@@ -161,7 +206,7 @@ body
   overflow: hidden
   // position: relative
   // overflow: auto
-  background-color: #95B1B0
+  background-color: #84B5A4
   // display: flex
   // justify-content: flex-end
   // margin-right: auto
@@ -237,7 +282,7 @@ body
   
   .burger
     display: block
-    background-color: #95B1B0
+    background-color: #84B5A4
 
   .nav-active
     transform: translateY(20%)
@@ -277,26 +322,50 @@ body
 #About-me
   position: relative
   padding: 20px
-  background-color: #f2f2f2
+  // background-color: #E2FFFE//#FCFCD4//#E2FFFE
 
-.project-list
+#Projects li
+  display: inline-block
+  margin-bottom: 40px
+
+.wordpress-li
+  float: right
+  
+.projects-mobile
+  display: none
+  // position: relative
+  // list-style-type: none
+  // margin: 0
+  // padding: 0
+  // // column-count: 2
+  // column-gap: 0
+  
+  // padding: 10px
+  // margin: 10px
+
+.projects-web
   position: relative
   list-style-type: none
   margin: 0
   padding: 0
-  column-count: 2
+  // column-count: 2
   column-gap: 0
   
   padding: 10px
   margin: 10px
-  background-color: #f2f2f2
+  // background-color: #E2FFFE
 
-  @media screen and (max-width:768px)
-    column-count: 1
+@media only screen and (max-width: 768px)
+  
+  .projects-mobile
+    display: inline-block
+
+  .projects-web
+    display: none
 
 
 .img-shade
-  opacity: 0.5
+  opacity: 1
   display: block
   width: 100%
   height: auto
@@ -305,7 +374,7 @@ body
 
 
 .un-shade
-  opacity: 0
+  opacity: 0  
   transition: .5s ease
   position: absolute
   top: 50%
@@ -388,7 +457,7 @@ textarea
   position: relative
   flex-direction: column
   border-radius: 5px
-  background-color: #f2f2f2
+  // background-color: #E2FFFE
   padding: 20px
   
   
