@@ -28,9 +28,16 @@ $(document).ready(function() {
         if(window_top > div_top){
             $('#Navigation').removeClass('nav-relative');
             $('#Navigation').addClass('nav-fixed');
+            $('#About-me').removeClass('top-margin');
+            $('#About-me').removeClass('bottom-margin');
+            $('#About-me').addClass('top-bottom-margin');
+
         }else{
             $('#Navigation').removeClass('nav-fixed');
             $('#Navigation').addClass('nav-relative');
+            $('#About-me').removeClass('top-bottom-margin');
+            $('#About-me').addClass('top-margin');
+            $('#About-me').addClass('bottom-margin');
         }
 
         // if($(window).width() < 768){

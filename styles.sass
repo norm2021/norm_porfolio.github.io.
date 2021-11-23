@@ -36,8 +36,14 @@ html
 body
   line-height: 1.3
 
-.top-bottom-margin
+.top-margin
   margin-top: 50px
+
+.bottom-margin
+  margin-bottom: 50px
+
+.top-bottom-margin
+  margin-top: 100px
   margin-bottom: 50px
 
 .sides-margin
@@ -153,6 +159,7 @@ body
 
 #Navigation
   overflow: hidden
+  // position: relative
   // overflow: auto
   background-color: #ff00ff
   // display: flex
@@ -378,10 +385,12 @@ textarea
 
 .contact-form
   display: flex
-  // flex-direction: column
+  // flex: 1 1 auto
+  flex-direction: column
   border-radius: 5px
   background-color: #f2f2f2
   padding: 20px
+  
   
 
 fieldset
