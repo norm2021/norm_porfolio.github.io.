@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@900&family=PT+Mono&display=swap')
 $Roboto: 'Roboto', sans-serif
 $Open-sans: 'Open Sans', sans-serif
+$PT-Mono: 'PT Mono', monospace
 
 @function multiple-box-shadow ($n)
   $value: '#{random(2000)}px #{random(20000)}px #FFF'
@@ -43,7 +44,7 @@ body
   margin-bottom: 50px
 
 .top-bottom-margin
-  margin-top: 100px
+  margin-top: 120px// 50px + 50px + 20px
   margin-bottom: 50px
 
 .sides-margin
@@ -132,7 +133,7 @@ body
   background-size: cover
   height: 400px
   width: 500px
-  float: right
+  // float: right
 
   &:hover .img-shade
     opacity: 0.2
@@ -144,13 +145,42 @@ body
     height: 250px
     width: 300px
 
+.wordpress-text
+  width: 300px
+  // float: right
+
+.wifi-text
+  width: 300px
+  float: right
+
+.wordpress-ul li
+  list-style: none
+  margin: 15px 0 0 0 
+
+  &::before
+    content: "👈\00a0\00a0"
+
+.wifi-ul li
+  list-style: none
+  margin: 15px 0 0 0
+
+  &::before
+    content: "👉\00a0\00a0"
+
+.wifi-ul .project-title
+  width: 250px
+  
+    
+    
+  content: &#128072
+
 .wifi-tool
   position: relative
   display: flex
   justify-content: center
   align-items: center
   background-size: cover
-  float: left
+  float: right
 
 
   height: 400px
@@ -322,18 +352,53 @@ body
 #About-me
   position: relative
   padding: 20px
+  display: flex
+  justify-content: center
   // background-color: #E2FFFE//#FCFCD4//#E2FFFE
 
-#Projects li
-  display: inline-block
-  margin-bottom: 40px
+// #Projects li
+//   display: inline-block
+//   margin-bottom: 40px
 
-.wordpress-li
-  float: right
-  
+// .wordpress-li
+//   float: right
+
+.about-me-font
+  font-family: $PT-Mono
+  width: 500px
+  line-height: 2.3
+
 .projects-mobile
   display: none
+
+// .wordpress-text
+//   float: left
+
+// .wifi-text
+//   float: right
+
+// .wifi-tool .img-shade
+//   float: left
+
+.projects-web
+  display: table
+  // text-align: center
+  // flex-wrap: nowrap
+  // align-items: center
   
+.project-title
+  display: flex
+  justify-content: center
+  background-color: #ADC5FF
+  align-items: center
+  width: 150px
+  height: 30px
+
+  
+
+.projects-web td 
+  display: table-cell
+  vertical-align: middle
 
 .projects-web
   position: relative
@@ -360,9 +425,11 @@ body
   opacity: 1
   display: block
   width: 100%
-  height: auto
+  height: auto  
   transition: .5s ease
   backface-visibility: hidden
+  
+  // position: absolute
 
 
 .un-shade
@@ -452,7 +519,8 @@ textarea
   // background-color: #E2FFFE
   padding: 20px
   
-  
+td
+  padding-bottom: 50px
 
 fieldset
   margin: 0 auto
@@ -460,7 +528,6 @@ fieldset
 button
   float: right
 
-  
 .stars
   width: toRem(1)
   height: toRem(1)
