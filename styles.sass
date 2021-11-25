@@ -146,17 +146,21 @@ body
     width: 300px
 
 .wordpress-text
-  width: 300px
-  // float: right
+  display: flex
+  justify-content: center
+  
 
 .wifi-text
-  width: 300px
-  float: right
+  display: flex
+  justify-content: center
+
+  // .wordpress-ul
+  //   display: table
 
 .wordpress-ul li
   list-style: none
-  margin: 15px 0 0 0 
-
+  margin: 15px 0 0 0
+  
   &::before
     content: "👈\00a0\00a0"
 
@@ -166,13 +170,8 @@ body
 
   &::before
     content: "👉\00a0\00a0"
-
-.wifi-ul .project-title
-  width: 250px
-  
     
-    
-  content: &#128072
+  // content: &#128072
 
 .wifi-tool
   position: relative
@@ -368,6 +367,9 @@ body
   width: 500px
   line-height: 2.3
 
+  @media only screen and (max-width: 768px)
+    font-size: 12px
+
 .projects-mobile
   display: none
 
@@ -389,10 +391,11 @@ body
 .project-title
   display: flex
   justify-content: center
-  background-color: #ADC5FF
+  // background-color: #ADC5FF
   align-items: center
   width: 150px
   height: 30px
+  
 
   
 
@@ -423,7 +426,9 @@ body
 
 .img-shade
   opacity: 1
-  display: block
+  display: flex
+  justify-content: center
+  align-content: center
   width: 100%
   height: auto  
   transition: .5s ease
@@ -442,17 +447,18 @@ body
   -ms-transform: translate(-50%, -50%)
   text-align: center
 
+
 .show-more
   border: none
-  color: white
-  padding: 15px 32px
-  text-align: center
-  text-decoration: none
-  display: inline-block
+  margin-top: 20px
+  padding: 5px 10px
+  border-radius: 5px
+  // text-decoration: none
+  // display: inline-block
   font-size: 16px
-  margin: 4px 2px
-  cursor: pointer
+  // cursor: pointer
   background-color: #37846E
+  // font: inherit
  
 
 .arrow-container
@@ -525,8 +531,14 @@ td
 fieldset
   margin: 0 auto
 
-button
-  float: right
+#footnote
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 500%)
+  height: 100px
+
+.footnote-content
+  color: white
+  font-family: $PT-Mono
+  padding: 10px 10px
 
 .stars
   width: toRem(1)
